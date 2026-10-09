@@ -1,0 +1,30 @@
+"""Six-digit security code problem (corrected from original answer key)."""
+
+
+def check_digit(d1, d2, d3, d4, d5):
+    total = (
+        d1 * 2
+        + d2 * 3
+        + d3 * 4
+        + d4 * 5
+        + d5 * 6
+    )
+    return total % 10
+
+
+digit_1 = 8
+digit_2 = 3
+digit_3 = 7
+digit_4 = 2
+digit_5 = 4
+
+last_digit = check_digit(digit_1, digit_2, digit_3, digit_4, digit_5)
+security_code = (
+    str(digit_1)
+    + str(digit_2)
+    + str(digit_3)
+    + str(digit_4)
+    + str(digit_5)
+    + str(last_digit)
+)
+print(security_code)
